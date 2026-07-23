@@ -1,7 +1,5 @@
 # AI Resume & Portfolio Builder
 
-![AI Resume & Portfolio Builder](https://atspilot.netlify.app/favicon.ico)
-
 **Live Demo:** [https://atspilot.netlify.app/](https://atspilot.netlify.app/)
 
 A modern, single-page web application that lets users fill out a step-by-step form in plain English and instantly generates a professional resume (with multiple templates, PDF download) and a personal portfolio webpage — all from the same data.
