@@ -1,0 +1,261 @@
+/* ============================================
+   AI Resume & Portfolio Builder — Responsive
+   ============================================ */
+
+/* ── Tablet (max-width: 1024px) ── */
+@media (max-width: 1024px) {
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .template-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero__title {
+    font-size: var(--text-5xl);
+  }
+
+  .resume-preview {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Tablet Small (max-width: 768px) ── */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 60px;
+  }
+
+  .hero {
+    padding-top: calc(var(--header-height) + var(--space-8));
+  }
+
+  .hero__title {
+    font-size: var(--text-4xl);
+  }
+
+  .hero__subtitle {
+    font-size: var(--text-base);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .features__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .features__title,
+  .how-it-works__title,
+  .cta-section__title {
+    font-size: var(--text-3xl);
+  }
+
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    max-width: 100%;
+  }
+
+  .step__connector {
+    display: none;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-card {
+    padding: var(--space-6);
+  }
+
+  .progress-step__label {
+    display: none;
+  }
+
+  .progress-step__circle {
+    width: 32px;
+    height: 32px;
+    font-size: var(--text-xs);
+  }
+
+  .template-cards {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .template-selector__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .template-selector__actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .template-selector__actions .btn {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .resume-preview-wrapper {
+    padding: var(--space-2);
+    overflow-x: auto;
+  }
+
+  .resume-preview {
+    width: 210mm;
+    transform-origin: top left;
+    transform: scale(0.5);
+    margin-bottom: -297mm;
+  }
+
+  .portfolio-hero__name {
+    font-size: var(--text-4xl);
+  }
+
+  .portfolio-hero__avatar {
+    width: 100px;
+    height: 100px;
+    font-size: var(--text-3xl);
+  }
+
+  .portfolio-nav__list {
+    justify-content: flex-start;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    padding-left: var(--space-6);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-panel {
+    width: 100%;
+    right: -100%;
+  }
+
+  .header__nav-text {
+    display: none;
+  }
+
+  .header {
+    padding: 0 var(--space-4);
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .form-actions__left,
+  .form-actions__right {
+    width: 100%;
+  }
+
+  .form-actions .btn {
+    flex: 1;
+  }
+}
+
+/* ── Mobile (max-width: 480px) ── */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .hero__title {
+    font-size: var(--text-3xl);
+  }
+
+  .hero__badge {
+    font-size: var(--text-xs);
+  }
+
+  h2 {
+    font-size: var(--text-2xl);
+  }
+
+  .container {
+    padding: 0 var(--space-4);
+  }
+
+  .section {
+    padding: var(--space-12) 0;
+  }
+
+  .feature-card {
+    padding: var(--space-5);
+  }
+
+  .form-card {
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+  }
+
+  .repeatable-item {
+    padding: var(--space-4);
+  }
+
+  .portfolio-hero {
+    min-height: 60vh;
+  }
+
+  .portfolio-hero__name {
+    font-size: var(--text-3xl);
+  }
+
+  .portfolio-hero__tagline {
+    font-size: var(--text-base);
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-preview {
+    transform: scale(0.38);
+    margin-bottom: -350mm;
+  }
+}
+
+/* ── Wide Desktop (min-width: 1280px) ── */
+@media (min-width: 1280px) {
+  .hero__title {
+    font-size: 4rem;
+  }
+
+  .features__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+  }
+}

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Resume & Portfolio Builder — Create stunning professional resumes and portfolios in minutes. Multiple templates, PDF download, and AI-powered suggestions.">
+  <meta name="keywords" content="resume builder, portfolio builder, AI resume, professional resume, CV maker">
+  <meta name="author" content="AI Resume Builder">
+  <title>AI Resume & Portfolio Builder — Create Professional Resumes in Minutes</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- html2pdf.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/landing.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/resume.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234f46e5'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>R</text></svg>">
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- HEADER / NAVBAR                              -->
+  <!-- ════════════════════════════════════════════ -->
+  <header class="header" id="appHeader">
+    <div class="header__logo" id="headerLogo">
+      <div class="header__logo-icon">R</div>
+      <span>Resume<span style="color: var(--color-accent);">AI</span></span>
+    </div>
+    <nav class="header__nav">
+      <button class="btn btn--ghost btn--sm" id="navFormBtn">
+        <span>✏️</span>
+        <span class="header__nav-text">Builder</span>
+      </button>
+      <button class="btn btn--ghost btn--sm" id="navResumeBtn">
+        <span>📄</span>
+        <span class="header__nav-text">Resume</span>
+      </button>
+      <button class="btn btn--ghost btn--sm" id="navPortfolioBtn">
+        <span>🌐</span>
+        <span class="header__nav-text">Portfolio</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- PAGE: LANDING                                -->
+  <!-- ════════════════════════════════════════════ -->
+  <div class="page active" id="page-landing">
+    <div class="landing">
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero__glow hero__glow--primary"></div>
+        <div class="hero__glow hero__glow--accent"></div>
+
+        <div class="hero__particles">
+          <div class="hero__particle"></div>
+          <div class="hero__particle"></div>
+          <div class="hero__particle"></div>
+          <div class="hero__particle"></div>
+          <div class="hero__particle"></div>
+          <div class="hero__particle"></div>
+          <div class="hero__particle"></div>
+          <div class="hero__particle"></div>
+          <div class="hero__particle"></div>
+          <div class="hero__particle"></div>
+          <div class="hero__particle"></div>
+          <div class="hero__particle"></div>
+        </div>
+
+        <div class="hero__content">
+          <div class="hero__badge">
+            <span class="hero__badge-dot"></span>
+            AI-Powered Resume Builder
+          </div>
+          <h1 class="hero__title">
+            Build Your Dream<br><span class="gradient-text">Resume & Portfolio</span>
+          </h1>
+          <p class="hero__subtitle">
+            Create stunning professional resumes and personal portfolio websites in minutes.
+            Just fill in your details — we handle the design, formatting, and polish.
+          </p>
+          <div class="hero__actions">
+            <button class="btn btn--primary btn--lg" data-navigate="form">
+              <span>🚀</span> Get Started Free
+            </button>
+            <button class="btn btn--secondary btn--lg" data-navigate="form" style="backdrop-filter: blur(10px);">
+              <span>📄</span> See Templates
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features" id="features">
+        <div class="features__header">
+          <p class="features__label animate-on-scroll">Why Choose Us</p>
+          <h2 class="features__title animate-on-scroll">Everything You Need</h2>
+          <p class="features__subtitle animate-on-scroll">
+            Professional tools to create the perfect resume and portfolio, powered by smart suggestions.
+          </p>
+        </div>
+
+        <div class="features__grid">
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-card__icon feature-card__icon--primary">📑</div>
+            <h3 class="feature-card__title">Multiple Templates</h3>
+            <p class="feature-card__desc">Choose from Classic, Modern, and Minimal designs. Each template is crafted for maximum impact with recruiters.</p>
+          </div>
+
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-card__icon feature-card__icon--accent">📥</div>
+            <h3 class="feature-card__title">PDF Download</h3>
+            <p class="feature-card__desc">Export your polished resume as a pixel-perfect PDF. Ready to send to employers or upload to job portals.</p>
+          </div>
+
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-card__icon feature-card__icon--success">🌐</div>
+            <h3 class="feature-card__title">Portfolio Website</h3>
+            <p class="feature-card__desc">Automatically generates a stunning personal portfolio website from the same information. Zero extra effort.</p>
+          </div>
+
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-card__icon feature-card__icon--primary">✨</div>
+            <h3 class="feature-card__title">AI Suggestions</h3>
+            <p class="feature-card__desc">Get intelligent suggestions for your summary, bullet points, and skills. Write like a pro with AI-powered enhancements.</p>
+          </div>
+
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-card__icon feature-card__icon--accent">📱</div>
+            <h3 class="feature-card__title">Mobile Friendly</h3>
+            <p class="feature-card__desc">Build your resume from any device. Our responsive design works perfectly on phones, tablets, and desktops.</p>
+          </div>
+
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-card__icon feature-card__icon--success">🔒</div>
+            <h3 class="feature-card__title">100% Free & Private</h3>
+            <p class="feature-card__desc">No sign-up required. Your data stays in your browser — we never collect or store any personal information.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="how-it-works">
+        <div class="how-it-works__header">
+          <p class="how-it-works__label animate-on-scroll">Simple Process</p>
+          <h2 class="how-it-works__title animate-on-scroll">How It Works</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step animate-on-scroll">
+            <div class="step__number">1</div>
+            <div class="step__connector"></div>
+            <h3 class="step__title">Fill the Form</h3>
+            <p class="step__desc">Enter your details step by step — name, education, skills, experience, projects, and achievements.</p>
+          </div>
+
+          <div class="step animate-on-scroll">
+            <div class="step__number">2</div>
+            <div class="step__connector"></div>
+            <h3 class="step__title">Preview & Customize</h3>
+            <p class="step__desc">Choose a template, preview your resume in real-time, and refine it with AI-powered suggestions.</p>
+          </div>
+
+          <div class="step animate-on-scroll">
+            <div class="step__number">3</div>
+            <h3 class="step__title">Download & Share</h3>
+            <p class="step__desc">Download your resume as a PDF and view your auto-generated portfolio website. You're ready to impress!</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="cta-section__content">
+          <h2 class="cta-section__title animate-on-scroll">Ready to Build Your Resume?</h2>
+          <p class="cta-section__subtitle animate-on-scroll">
+            Join thousands of professionals who landed their dream jobs with our builder.
+          </p>
+          <button class="btn btn--primary btn--lg animate-on-scroll" data-navigate="form">
+            <span>🚀</span> Start Building Now
+          </button>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p class="footer__text">
+          Made with <span class="footer__heart">❤️</span> by <span>ResumeAI</span> · © 2026 All rights reserved
+        </p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- PAGE: FORM (Step-by-Step Builder)            -->
+  <!-- ════════════════════════════════════════════ -->
+  <div class="page" id="page-form">
+    <div class="form-page">
+
+      <!-- Progress Bar -->
+      <div class="progress-bar" id="progressBar"></div>
+
+      <!-- Form Container -->
+      <div class="form-container">
+        <div class="form-card glass-card glass-card--static">
+          <!-- Form Header -->
+          <div class="form-card__header">
+            <p class="form-card__step-label" id="formStepLabel">Step 1 of 7</p>
+            <h2 class="form-card__title" id="formStepTitle">Personal Information</h2>
+            <p class="form-card__subtitle" id="formStepSubtitle">Let's start with your basic details</p>
+          </div>
+
+          <!-- Form Steps Container -->
+          <div id="formSteps"></div>
+
+          <!-- Form Actions -->
+          <div class="form-actions">
+            <div class="form-actions__left">
+              <button type="button" class="btn btn--secondary" id="prevBtn" style="display: none;">
+                ← Previous
+              </button>
+            </div>
+            <div class="form-actions__right">
+              <button type="button" class="btn btn--outline" id="aiSuggestBtn">
+                ✨ AI Suggestions
+              </button>
+              <button type="button" class="btn btn--primary" id="nextBtn">
+                Next →
+              </button>
+              <button type="button" class="btn btn--primary" id="generateBtn" style="display: none;">
+                🚀 Generate Resume
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- AI Suggestion Panel -->
+    <div class="ai-overlay" id="aiOverlay"></div>
+    <aside class="ai-panel" id="aiPanel">
+      <div class="ai-panel__header">
+        <div class="ai-panel__title">
+          <span class="ai-panel__title-icon">✨</span>
+          AI Suggestions
+        </div>
+        <button class="ai-panel__close" id="aiPanelClose">✕</button>
+      </div>
+      <div id="aiSuggestionsList"></div>
+    </aside>
+  </div>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- PAGE: RESUME PREVIEW                         -->
+  <!-- ════════════════════════════════════════════ -->
+  <div class="page" id="page-resume">
+    <div class="resume-page">
+      <div class="resume-page__content">
+
+        <!-- Template Selector -->
+        <div class="template-selector">
+          <div class="template-selector__header">
+            <h2 class="template-selector__title">Choose a Template</h2>
+            <div class="template-selector__actions">
+              <button class="btn btn--secondary btn--sm" id="editResumeBtn">
+                ✏️ Edit Details
+              </button>
+              <button class="btn btn--outline btn--sm" id="printResumeBtn">
+                🖨️ Print
+              </button>
+              <button class="btn btn--primary btn--sm" id="downloadPdfBtn">
+                📥 Download PDF
+              </button>
+              <button class="btn btn--secondary btn--sm" id="viewPortfolioBtn">
+                🌐 View Portfolio
+              </button>
+            </div>
+          </div>
+
+          <div class="template-cards" id="templateCards"></div>
+        </div>
+
+        <!-- Resume Preview -->
+        <div class="resume-preview-wrapper">
+          <div class="resume-preview" id="resumePreview">
+            <!-- Resume content rendered here by JS -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- PAGE: PORTFOLIO                              -->
+  <!-- ════════════════════════════════════════════ -->
+  <div class="page" id="page-portfolio">
+    <div class="portfolio-page" id="portfolioContent">
+      <!-- Portfolio content rendered here by JS -->
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- App Script (ES Module)                       -->
+  <!-- ════════════════════════════════════════════ -->
+  <script type="module" src="js/app.js"></script>
+
+</body>
+</html>
